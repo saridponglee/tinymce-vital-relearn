@@ -280,7 +280,7 @@ const RichTextEditor = ({
       'removeformat | link image media table emoticons codesample',
       'thick_separator thin_separator math_equation | code fullscreen help'
     ],
-    toolbar_mode: 'wrap',
+    toolbar_mode: 'wrap' as const,
     toolbar_sticky: true,
     toolbar_sticky_offset: 0,
     // Touch-friendly menu configuration
@@ -533,7 +533,7 @@ const RichTextEditor = ({
     },
     // Mobile responsiveness
     mobile: {
-      toolbar_mode: 'sliding'
+      toolbar_mode: 'sliding' as const
     }
   };
 
@@ -1047,7 +1047,7 @@ export default function MobileFirstEditor() {
 
   const getButtonStyle = (variant: 'primary' | 'secondary', disabled: boolean) => ({
     padding: 'clamp(12px, 3vw, 16px) clamp(20px, 5vw, 24px)',
-    border: 'none',
+    border: variant === 'secondary' ? `2px solid ${theme.border}` : 'none',
     borderRadius: 'clamp(6px, 2vw, 8px)',
     fontSize: 'clamp(14px, 3.5vw, 16px)',
     fontWeight: '600',
@@ -1059,8 +1059,7 @@ export default function MobileFirstEditor() {
     fontFamily: '"Prompt", "Kanit", sans-serif',
     opacity: disabled ? 0.6 : 1,
     backgroundColor: variant === 'primary' ? theme.primary : theme.surface,
-    color: variant === 'primary' ? '#ffffff' : theme.text,
-    border: variant === 'secondary' ? `2px solid ${theme.border}` : 'none'
+    color: variant === 'primary' ? '#ffffff' : theme.text
   });
 
   const resetForm = () => {

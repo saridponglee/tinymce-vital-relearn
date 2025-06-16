@@ -24,6 +24,7 @@ export default function RootLayout({
         <script 
           src="https://cdn.tiny.cloud/1/wl4p3hpruyc1h75fgou8wnm83zmvosve1jkmqo4u3kecci46/tinymce/6/tinymce.min.js" 
           referrerPolicy="origin"
+          async
         ></script>
       </head>
       <body className={inter.className}>{children}</body>
