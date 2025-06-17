@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.50.0",
+    "@tailwindcss/line-clamp": "^0.4.4",
     "@tinymce/tinymce-react": "^6.2.1",
     "next": "15.3.3",
     "react": "^19.0.0",

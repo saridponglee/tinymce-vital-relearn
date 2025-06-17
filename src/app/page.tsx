@@ -870,7 +870,7 @@ export default function MobileFirstEditor() {
           hasUnsavedChanges: false
         });
       }
-    } catch (error) {
+      } catch (error) {
       console.error('Autosave failed:', error);
       setAutosaveStatus(prev => ({ 
         ...prev, 
@@ -1257,7 +1257,7 @@ export default function MobileFirstEditor() {
                   }}
                 />
               ))}
-            </div>
+      </div>
           </FormField>
 
           {/* Article Summary */}
@@ -1355,23 +1355,23 @@ export default function MobileFirstEditor() {
                         borderRadius: 'clamp(6px, 2vw, 8px)'
                       }}
                     />
-                    <button
+        <button 
                       type="button"
                       onClick={(e) => {
                         e.stopPropagation();
                         removeImage();
                       }}
-                      style={{
+          style={{ 
                         position: 'absolute',
                         top: 'clamp(12px, 3vw, 16px)',
                         right: 'clamp(12px, 3vw, 16px)',
                         backgroundColor: theme.error,
                         color: '#ffffff',
-                        border: 'none',
+            border: 'none',
                         borderRadius: '50%',
                         width: 'clamp(44px, 10vw, 52px)',
                         height: 'clamp(44px, 10vw, 52px)',
-                        cursor: 'pointer',
+            cursor: 'pointer',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -1383,7 +1383,7 @@ export default function MobileFirstEditor() {
                       }}
                     >
                       ×
-                    </button>
+        </button>
                   </div>
                 ) : (
                   <>
@@ -1414,8 +1414,8 @@ export default function MobileFirstEditor() {
                     </div>
                   </>
                 )}
-              </div>
-
+      </div>
+      
               {/* Hidden File Input */}
               <input
                 type="file"
@@ -1427,7 +1427,7 @@ export default function MobileFirstEditor() {
 
               {/* URL Input Alternative */}
               <div style={{ display: 'flex', alignItems: 'center', gap: 'clamp(8px, 2vw, 12px)' }}>
-                <div style={{
+      <div style={{ 
                   flex: 1,
                   height: '1px',
                   backgroundColor: theme.border
@@ -1445,7 +1445,7 @@ export default function MobileFirstEditor() {
                   height: '1px',
                   backgroundColor: theme.border
                 }} />
-              </div>
+      </div>
 
               <input
                 type="url"
